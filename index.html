@@ -21,6 +21,10 @@
 
 <!-- Bootstrap JS -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- Link CDN Swiper di dalam <head> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
 
  
 </head>
@@ -49,8 +53,8 @@
             <li><a href="#aboutme" class="scroll-link">About Me</a></li>
             <li><a href="#team" class="scroll-link">Our Team</a></li>
             <li><a href="#service" class="scroll-link">Services</a></li>
-            <li><a href="#clients" class="scroll-link">Clients</a></li>
-            <li><a href="#team" class="scroll-link">Team</a></li>
+            <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
+            <li><a href="#client" class="scroll-link">Client Review</a></li>
             <li><a href="#contact" class="scroll-link button-hubungi">Hubungi Kami</a></li>
           </ul>
         </div>
@@ -100,34 +104,89 @@
 
 
     <section class="team-section" id="team">
-      <h2 class="team-title">OUR TEAM</h2>
-    
+      <h2 class="team-title">Our Team</h2>
       <div class="team">
-        <!-- Card 1 -->
         <div class="team-card-wrapper">
           <div class="team-card">
             <div class="photo"></div>
-          </div>
-          <div class="team-info">
-            <h4>CEO Founder</h4>
-            <p>Pak Fulan Fulanwan<br>S.Kom</p>
+            <div class="team-info">
+              <p class="jabatan">Frontend Developer</p>
+              <h4 class="nama">Nama 1</h4>
+            </div>
           </div>
         </div>
-    
-        <!-- Card 2 -->
         <div class="team-card-wrapper">
           <div class="team-card">
             <div class="photo"></div>
-          </div>
-          <div class="team-info">
-            <h4>CEO Founder</h4>
-            <p>Pak Fulan Fulanwan<br>S.Kom</p>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
           </div>
         </div>
-    
-        <!-- Tambahkan lebih banyak team-card-wrapper sesuai kebutuhan -->
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
+            </div>
+          </div>
+        </div>
+        <div class="team-card-wrapper">
+          <div class="team-card">
+            <div class="photo"></div>
+            <div class="team-info">
+              <p class="jabatan">Backend Developer</p>
+              <h4 class="nama">Nama 2</h4>
       </div>
     </section>
+    
     
 
       
@@ -174,286 +233,140 @@
 <!-- End Service -->
 
 
-<!-- Portfolio -->
-<section id="Portfolio" class="content"> 
-  
-  <!-- Container -->
-  <div class="container portfolio_title"> 
-    
-    <!-- Title -->
-    <div class="section-title">
-      <h2>Portfolio</h2>
+<section id="portfolio" class="portfolio-section">
+  <div class="container text-center">
+    <h2 class="portfolio-title">My Portfolio</h2>
+    <p class="portfolio-desc">
+      Berikut beberapa event yang telah sukses kami tangani. Setiap acara adalah bukti komitmen kami<br>
+      dalam menciptakan pengalaman yang tak terlupakan:
+    </p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="img/Mask group.png" alt="Deklarasi Berintegritas">
+        <h4>Deklarasi Berintegritas</h4>
+        <p>Bawaslu Provinsi Jawa Barat</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/Mask group (1).png" alt="Deklarasi Berintegritas">
+        <h4>Deklarasi Berintegritas</h4>
+        <p>Bawaslu Kab.Bandung</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/Mask group (2).png" alt="Penghargaan Kehumasan">
+        <h4>Penghargaan Kehumasan</h4>
+        <p>Bawaslu Kab.Bandung</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/Mask group (3).png" alt="Penghargaan Kehumasan">
+        <h4>Penghargaan Kehumasan</h4>
+        <p>Bawaslu Kab.Indramayu</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/Mask group (3).png" alt="Penutupan LPDP">
+        <h4>Penutupan LPDP Camp</h4>
+        <p>LPDP Camp</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="img/Mask group (3).png" alt="Pelantikan GP Ansor Jabar">
+        <h4>Pelantikan GP Ansor Jabar</h4>
+        <p>PW Ansor Provinsi Jabar</p>
+      </div>
     </div>
-    <!--/Title --> 
-    
   </div>
-  <!-- Container -->
-  
-  <div class="portfolio-top"></div>
-  
-  <!-- Portfolio Filters -->
-  <div class="portfolio"> 
-    
-    <div id="filters" class="sixteen columns">
-      <ul class="clearfix">
-        <li><a id="all" href="#" data-filter="*" class="active">
-          <h5>All</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".prototype">
-          <h5>Prototype</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".design">
-          <h5>Design</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".android">
-          <h5>Android</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".appleIOS">
-          <h5>Apple IOS</h5>
-          </a></li>
-        <li><a class="" href="#" data-filter=".web">
-          <h5>Web App</h5>
-          </a></li>
-      </ul>
-    </div>
-    <!--/Portfolio Filters --> 
-    
-    <!-- Portfolio Wrapper -->
-    <div class="isotope fadeInLeft animated wow" style="position: relative; overflow: hidden; height: 480px;" id="portfolio_wrapper"> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   appleIOS isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic1.jpg"  alt="Portfolio 1"> </div>        
-        <div class="item_overlay">
-          <a href="img/portfolio_pic1.jpg" class="item_info fancybox"> 
-            <h4 class="project_name">SMS Mobile App</h4> 
-          </a>
-        </div>
-        </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item-->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic2.jpg" alt="Portfolio 1"> </div>
-        <div class="item_overlay">           
-          <a href="img/portfolio_pic2.jpg" class="item_info fancybox">
-            <h4 class="project_name">Finance App</h4>             
-          </a>
-        </div>
-      </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design  isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic3.jpg" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <a href="img/portfolio_pic3.jpg" class="item_info fancybox">
-            <h4 class="project_name">GPS Concept</h4> 
-          </a>
-        </div>
-      </div>
-      <!--/Portfolio Item--> 
-      
-      <!-- Portfolio Item-->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 0px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  android  prototype web isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic4.jpg" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <a href="img/portfolio_pic4.jpg" class="item_info fancybox">
-            <h4 class="project_name">Shopping</h4> 
-          </a>
-        </div>
-      </div>
-      <!-- Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic5.jpg" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <a href="img/portfolio_pic5.jpg" class="item_info fancybox">
-            <h4 class="project_name">Managment</h4>  
-          </a>
-        </div>
-      </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(337px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  web isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic6.jpg" alt="Portfolio 1"> </div>
-        <div class="item_overlay">
-          <a href="img/portfolio_pic6.jpg" class="item_info fancybox"> 
-            <h4 class="project_name">iPhone            
-            </h4>  
-          </a>
-        </div>
-      </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item  -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(674px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four  design web isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic7.jpg" alt="Portfolio 1"> </div>       
-        <div class="item_overlay">
-          <a href="img/portfolio_pic7.jpg" class="item_info fancybox">
-            <h4 class="project_name">Nexus Phone</h4> 
-          </a>
-        </div>
-       </div>
-      <!--/Portfolio Item --> 
-      
-      <!-- Portfolio Item -->
-      <div style="position: absolute; left: 0px; top: 0px; transform: translate3d(1011px, 240px, 0px) scale3d(1, 1, 1); width: 337px; opacity: 1;" class="portfolio-item one-four   android isotope-item">
-        <div class="portfolio_img"> <img src="img/portfolio_pic8.jpg" alt="Portfolio 1"> </div>       
-        <div class="item_overlay">
-         <a href="img/portfolio_pic8.jpg" class="item_info fancybox"> 
-				<h4 class="project_name">Android</h4> 
-          </a>
-        </div>
-        </div>
-      <!--/Portfolio Item --> 
-      
-    </div>
-    <!--/Portfolio Wrapper --> 
-    
-  </div>
-  <!--/Portfolio Filters -->
-  
-  <div class="portfolio_btm"></div>
-  
-  
-  <div id="project_container">
-    <div class="clear"></div>
-    <div id="project_data"></div>
-  </div>
- 
-  
 </section>
-<!--/Portfolio --> 
 
-<section class="page_section" id="clients"><!--page_section-->
-  <h2>Clients</h2>
-<!--page_section-->
-<div class="client_logos"><!--client_logos-->
-  <div class="container">
-    <ul class="fadeInRight animated wow">
-      <li><a href="javascript:void(0)"><img src="img/client_logo1.png" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="img/client_logo2.png" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="img/client_logo3.png" alt=""></a></li>
-      <li><a href="javascript:void(0)"><img src="img/client_logo5.png" alt=""></a></li>
-    </ul>
-  </div>
-</div>
-</section>
-<!--client_logos-->
-
-<section class="page_section team" id="team"><!--main-section team-start-->
-  <div class="container">
-    <h2>Team</h2>
-    <h6>Lorem ipsum dolor sit amet, consectetur adipiscing.</h6>
-    <div class="team_section clearfix">
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-03s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/team_pic1.jpg" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
+<!-- TESTIMONIAL SECTION -->
+<section class="testimonial-section" id="client">
+  <h2 class="testimonial-title">Client Review</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <p class="testimonial-text">
+            "Luar biasa! Tim Coffee Morning sangat profesional dan komunikatif. Event product launch kami berjalan
+            lancar, semua detail diperhatikan dengan baik. Highly recommended!"
+          </p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/60" alt="Adhen" class="testimonial-img"/>
+            <div>
+              <strong>Adhen</strong><br/>
+              <span>/ Ketua Bawaslu Prov.Jabar</span>
+            </div>
+          </div>
         </div>
-        <h3 class="wow fadeInDown delay-03s">Tom Rensed</h3>
-        <span class="wow fadeInDown delay-03s">Chief Executive Officer</span> 
       </div>
-      <div class="team_area">
-        <div class="team_box  wow fadeInDown delay-06s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/team_pic2.jpg" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="testimonial-item">
+          <p class="testimonial-text">
+            "Terima kasih Coffee Morning! Semua rapi, cepat tanggap dan sangat komunikatif!"
+          </p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/60" alt="Rina" class="testimonial-img"/>
+            <div>
+              <strong>Rina</strong><br/>
+              <span>/ EO LPDP Camp</span>
+            </div>
+          </div>
         </div>
-        <h3 class="wow fadeInDown delay-06s">Kathren Mory</h3>
-        <span class="wow fadeInDown delay-06s">Vice President</span> 
-      </div>
-      <div class="team_area">
-        <div class="team_box wow fadeInDown delay-09s">
-          <div class="team_box_shadow"><a href="javascript:void(0)"></a></div>
-          <img src="img/team_pic3.jpg" alt="">
-          <ul>
-            <li><a href="javascript:void(0)" class="fa fa-twitter"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-facebook"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-pinterest"></a></li>
-            <li><a href="javascript:void(0)" class="fa fa-google-plus"></a></li>
-          </ul>
-        </div>
-        <h3 class="wow fadeInDown delay-09s">Lancer Jack</h3>
-        <span class="wow fadeInDown delay-09s">Senior Manager</span> 
       </div>
     </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
   </div>
 </section>
-<!--/Team-->
-<!--Footer-->
+
+<!-- Footer -->
 <footer class="footer_wrapper" id="contact">
   <div class="container">
     <section class="page_section contact" id="contact">
       <div class="contact_section">
         <h2>Contact Us</h2>
         <div class="row">
-          <div class="col-lg-4">
-            
+          <div class="col-lg-4 wow fadeInLeft">
+            <div class="contact_info">
+              <div class="detail">
+                <h4>DIGITAL COFFEE MORNING TECHNOLOGY</h4>
+                <p>Jl. Teknologi No. 123, Jakarta, Indonesia</p>
+              </div>
+              <div class="detail">
+                <h4>Call Us</h4>
+                <p>+62 812 3456 7890</p>
+              </div>
+              <div class="detail">
+                <h4>Email Us</h4>
+                <p>info@digitalcoffeetech.com</p>
+              </div>
+            </div>
+            <ul class="social_links">
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
           </div>
-          <div class="col-lg-4">
-           
-          </div>
-          <div class="col-lg-4">
-          
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 wow fadeInLeft">	
-		 <div class="contact_info">
-                            <div class="detail">
-                                <h4>UNIQUE Infoway</h4>
-                                <p>104, Some street, NewYork, USA</p>
-                            </div>
-                            <div class="detail">
-                                <h4>call us</h4>
-                                <p>+1 234 567890</p>
-                            </div>
-                            <div class="detail">
-                                <h4>Email us</h4>
-                                <p>support@sitename.com</p>
-                            </div> 
-                        </div>
-       		  
-			  
-          
-          <ul class="social_links">
-            <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-            <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-            <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-            <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li> 
-          </ul>
-        </div>
-        <div class="col-lg-8 wow fadeInLeft delay-06s">
-          <div class="form">
-            <input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">
-            <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-            <input class="input-btn" type="submit" value="send message">
+          <div class="col-lg-8 wow fadeInRight delay-06s">
+            <div class="form">
+              <input class="input-text" type="text" placeholder="Your Name *">
+              <input class="input-text" type="email" placeholder="Your Email *">
+              <textarea class="input-text text-area" placeholder="Your Message *"></textarea>
+              <input class="input-btn" type="submit" value="Send Message">
+            </div>
           </div>
         </div>
       </div>
     </section>
   </div>
   <div class="container">
-    <div class="footer_bottom"><span>Copyright © 2014,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+    <div class="footer_bottom">
+      <span>&copy; 2025 DIGITAL COFFEE MORNING TECHNOLOGY. All Rights Reserved.</span>
+    </div>
   </div>
 </footer>
+
 
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -466,6 +379,20 @@
 <script type="text/javascript" src="js/custom.js"></script>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- Swiper CDN JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    slidesPerView: 1,
+    centeredSlides: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
+
 
 
 </body>
