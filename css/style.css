@@ -239,6 +239,60 @@ p {
     background-color: #ffffff;
     transform: translateY(-2px);
 }
+/* Tambahan untuk responsive navbar */
+@media (max-width: 768px) {
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        margin-right: 15px;
+    }
+
+    .navbar-collapse {
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin: 0;
+    }
+
+    .navbar-nav > li {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+
+    .logo {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+.logo {
+    float: left;
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+    height: auto;
+}
+
+.logo img {
+    max-height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+/* Responsive: saat di layar kecil, kecilin ukuran logo */
+@media (max-width: 768px) {
+    .logo img {
+        max-height: 30px;
+    }
+}
 
 /* Top_content
 ---------------------------------*/
