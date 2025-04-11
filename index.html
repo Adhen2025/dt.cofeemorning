@@ -15,6 +15,8 @@
   <link href="css/font-awesome.css" rel="stylesheet" type="text/css"> 
   <link href="css/animate.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 </head>
 
 <!-- jQuery (harus duluan) -->
@@ -54,7 +56,7 @@
             <li><a href="#service" class="scroll-link">Services</a></li>
             <li><a href="#portfolio" class="scroll-link">Portfolio</a></li>
             <li><a href="#client" class="scroll-link">Client Review</a></li>
-            <li><a href="#contact" class="scroll-link button-hubungi">Hubungi Kami</a></li>
+            <li><a href="#!" class="scroll-link button-hubungi" onclick="openPopup()">Hubungi Kami</a></li>
           </ul>
         </div>
       </div>
@@ -62,6 +64,27 @@
   </header>
   
 <!--Header_section--> 
+
+<!--Audio--> 
+<audio id="bg-music" autoplay loop muted>
+  <source src="music/sound.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+<!--Audio--> 
+
+<!-- Popup -->
+<div id="popup-contact" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h3>Hubungi Kami</h3>
+    <p>Pilih cara yang paling nyaman untuk menghubungi kami:</p>
+    <ul>
+      <li><a href="mailto:your-email@example.com"><i class="fa fa-envelope"></i> Email: your-email@example.com</a></li>
+      <li><a href="https://wa.me/6281234567890" target="_blank"><i class="fa fa-whatsapp"></i>  WhatsApp: +62 812-3456-7890</a></li>
+      <li><a href="https://wa.me/6289876543210" target="_blank"><i class="fa fa-whatsapp"></i>  WhatsApp: +62 898-7654-3210</a></li>
+    </ul>
+  </div>
+</div>
 
 <!--Hero_Section-->
 <section id="hero_section" class="top_cont_outer">
@@ -84,7 +107,7 @@
       <div class="top_left_cont">
         <img src="img/logo2.png" alt="Logo" class="logo-hero">
         <h2><strong>Momen Berkesan</strong><br>Tanpa Beban</h2>
-        <a href="#contact" class="read_more">Konsultasi Gratis</a>
+        <a href="#" class="scroll-link button-hubungi" onclick="openPopup()">Konsultasi Gratis</a>
       </div>
     </div>
   </div>
@@ -102,15 +125,15 @@
 
     <div class="stats">
       <div class="stat">
-        <h3>502</h3>
+        <h3>10</h3>
         <p>Projects Done</p>
       </div>
       <div class="stat">
-        <h3>10+</h3>
+        <h3>2+</h3>
         <p>Years of Experience</p>
       </div>
       <div class="stat">
-        <h3>273+</h3>
+        <h3>10+</h3>
         <p>Clients Served</p>
       </div>
     </div>
@@ -374,18 +397,23 @@
             </div>
             <ul class="social_links">
               <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://www.instagram.com/dt.coffeemorning/"><i class="fa fa-instagram"></i></a></li>
               <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
             </ul>
           </div>
           <div class="col-lg-8 wow fadeInRight delay-06s">
-            <div class="form">
-              <input class="input-text" type="text" placeholder="Your Name *">
-              <input class="input-text" type="email" placeholder="Your Email *">
-              <textarea class="input-text text-area" placeholder="Your Message *"></textarea>
+            <form action="https://formsubmit.co/abemserepet@gmail.com" method="POST" class="form">
+              <input class="input-text" type="text" name="name" placeholder="Your Name *" required>
+              <input class="input-text" type="email" name="email" placeholder="Your Email *" required>
+              <textarea class="input-text text-area" name="message" placeholder="Your Message *" required></textarea>
+              
+              <!-- Anti-spam honeypot -->
+              <input type="text" name="_honey" style="display:none">
+              <input type="hidden" name="_captcha" value="false">
+              
               <input class="input-btn" type="submit" value="Send Message">
-            </div>
+            </form>            
           </div>
         </div>
       </div>
@@ -423,6 +451,7 @@
     },
   });
 </script>
+
 <script>
   const video = document.getElementById("bgVideo");
 
@@ -447,6 +476,47 @@
     replayWithDelay();
   });
 </script>
+
+<script>
+  function openPopup() {
+    document.getElementById("popup-contact").style.display = "block";
+  }
+  
+  function closePopup() {
+    document.getElementById("popup-contact").style.display = "none";
+  }
+  </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector(".navbar-toggle");
+      const nav = document.querySelector(".navStyle");
+      const overlay = document.querySelector(".overlay");
+  
+      toggleBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
+  
+      overlay.addEventListener("click", () => {
+        nav.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    });
+  </script>
+
+<script>
+  window.addEventListener('load', function () {
+    const audio = document.getElementById("bg-music");
+    audio.muted = false;          // unmute
+    audio.volume = 1.5;           // atur volume (misal: 50%)
+    audio.play().catch(e => {
+      console.log("Autoplay diblokir:", e);
+    });
+  });
+</script>
+
+  
 
 
 
