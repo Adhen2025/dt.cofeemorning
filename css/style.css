@@ -294,6 +294,107 @@ p {
     }
 }
 
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+/* Popup Background */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Popup Box */
+  .popup-content {
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 20px;
+    max-width: 400px;
+    margin: 120px auto;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: scaleIn 0.3s ease;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  @keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Close Button */
+  .close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .close-btn:hover {
+    color: #333;
+  }
+  
+  /* Title & Text */
+  .popup-content h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #28a745; /* hijau */
+  }
+  .popup-content p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Links */
+  .popup-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .popup-content li {
+    margin: 12px 0;
+  }
+  .popup-content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* putih */
+    padding: 12px 18px;
+    border-radius: 10px;
+    color: #28a745; /* hijau */
+    text-decoration: none;
+    font-weight: 500;
+    border: 2px solid #28a745; /* outline hijau */
+    transition: 0.3s;
+  }
+  .popup-content a:hover {
+    background-color: #28a745;  /* hijau terang */
+    color: #fff;                /* teks putih saat hover */
+  }
+  .popup-content i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: inherit; /* ikut warna teks */
+  }
+
 /* Top_content
 ---------------------------------*/
 .top_cont_outer {
@@ -438,7 +539,7 @@ a.read_more:hover {
 }
 
 .stat h3 {
-    font-size: 28px; /* sebelumnya 32px, disamakan dengan .service-title */
+    font-size: 45px; /* sebelumnya 32px, disamakan dengan .service-title */
     color: #00e676;
     margin: 0;
     font-weight: bold;
@@ -1709,60 +1810,152 @@ font-size: 30px;
 .page_section.contact {
 padding: 60px 0 50px;
 } 
-.navbar-inverse .navbar-toggle .icon-bar{
-background:#ED5441;
-}
-.navbar-inverse .navbar-toggle {
-border-color: transparent;
-}
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus{
-background:none;
-outline: none;
-}
-.navStyle ul li {
-display: block;
-}
-.navStyle {
-float: right;
-width: 100%;
-text-align:center;
-}
-.navbar {
-border: 0px solid #fff;
-min-height: 40px;
-margin-bottom: 0px;
-float: right;
-}
-.navStyle ul li {
-display: block;
-margin: 0px;
-}
-.navStyle ul li:last-child {
-margin: 0px;
-}
-.navbar-inverse .navbar-nav > li > a {
-color: #222; 
-font-size:12px;
-padding: 10px 11px;
-}
-} 
-@media (max-width: 480px){ 
-.navStyle {
-float: left;
-width: 100%; 
-text-align: left;
-}
-.navbar {
-border: 0px solid #fff;
-min-height: 40px;
-margin-bottom: 0px;
-float: initial;
-width: 100%;
-}
-.team_area {
-width: 99%;
-}
-.read_more2{
-display:none;
-}
-}
+/* Umum - Navbar Styling */
+.navbar-inverse .navbar-toggle .icon-bar {
+    background: #2ef24f;
+  }
+  
+  .navbar-inverse .navbar-toggle {
+    border-color: transparent;
+  }
+  
+  .navbar-inverse .navbar-toggle:hover,
+  .navbar-inverse .navbar-toggle:focus {
+    background: none;
+    outline: none;
+  }
+  
+  /* Navbar container */
+  .navbar {
+    border: none;
+    min-height: 50px;
+    margin-bottom: 0;
+    background-color: #000; /* opsional, kalau butuh latar belakang */
+  }
+  
+  /* Navigasi style utama */
+  .navStyle {
+    float: right;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .navStyle ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .navStyle ul li {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .navStyle ul li:last-child {
+    margin-right: 0;
+  }
+  
+  /* Link Navigasi */
+  .navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    font-size: 14px;
+    padding: 12px 16px;
+    transition: 0.3s;
+  }
+  
+  .navbar-inverse .navbar-nav > li > a:hover {
+    color: #2ef24f; /* warna highlight saat hover */
+  }
+  
+  @media (max-width: 768px) {
+    /* === SIDEBAR MENU (KANAN) === */
+    .navStyle {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 260px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      padding-top: 80px;
+      text-align: left;
+      overflow-y: auto;
+    }
+  
+    .navStyle.active {
+      transform: translateX(0);
+    }
+  
+    .navStyle ul {
+      list-style: none;
+      padding: 0 20px;
+      margin: 0;
+    }
+  
+    .navStyle ul li {
+      margin: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .navStyle ul li a {
+      color: #fff;
+      font-size: 15px;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+      transition: 0.3s;
+    }
+  
+    .navStyle ul li a:hover {
+      color: #2ef24f;
+    }
+  
+    .navStyle .cta-button {
+      margin: 20px;
+      padding: 12px;
+      background-color: #2ef24f;
+      color: #fff;
+      border-radius: 8px;
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      width: calc(100% - 40px);
+    }
+  
+    /* TOGGLE ICON (☰) */
+    .navbar-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: transparent;
+      border: none;
+      z-index: 10001;
+    }
+  
+    /* OVERLAY (klik luar untuk tutup menu) */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: transparent;
+      z-index: 9998;
+      display: none;
+    }
+  
+    .overlay.active {
+      display: block;
+    }
+  
+    /* FIX HEADER TRANSPARAN */
+    .navbar {
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+  }
+  
