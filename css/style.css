@@ -550,106 +550,68 @@ a.read_more:hover {
     color: #333;
     margin: 5px 0 0;
 }
-.team {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 20px;
-    scroll-snap-type: x mandatory;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* untuk iOS swipe */
-}
 
-/* Scrollbar untuk Chrome/Safari */
-.team::-webkit-scrollbar {
-    height: 8px;
-}
-.team::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 4px;
-}
-
-.team-section {
-    width: 100%;
-    text-align: center;
-    margin-top: 50px;
-}
-  
-.team-title {
-    font-size: 28px;
-    font-weight: bold;
-    font-family: 'Raleway', sans-serif;
-    margin-bottom: 30px;
-}
-
-.team-card-wrapper {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.team-card {
-    width: 160px;
-    height: auto; /* Supaya tinggi fleksibel mengikuti isi */
-    background: #fff;
-    border: 2px solid #00e676;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    padding: 10px;
-}
-
-.team-card .photo {
-    width: 100%;
-    height: 160px;
-    background: #f5f5f5 url('../img/avatar-placeholder.png') center/cover no-repeat;
-    border-radius: 10px;
-}
-
-.photo img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+/* Grid setup */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom fleksibel */
+    gap: 16px; /* Jarak antar kotak */
+    padding: 24px;
+    max-width: 1200px;
+    margin: auto;
   }
   
-
-.team-info {
-    text-align: center;
-    margin-top: 30px;
-    max-width: 160px;
-}
-
-.team-info .jabatan {
-    font-size: 11px;
-    font-weight: 100;
-    color: #777;
-    margin-bottom: 0; /* tidak ada jarak ke bawah */
-    line-height: 1.1;  /* buat jaga kerapatan vertikal */
-    font-family: 'Raleway', sans-serif;
-}
-
-.team-info .nama {
-    font-size: 14px;
-    font-weight: 600;
-    color: #222;
-    margin-top: 0;     /* hilangkan jarak atas */
-    line-height: 1.1;  /* biar tetap rapih */
-    font-family: 'Raleway', sans-serif;
-}
-
-
-
+  /* Card setup */
+  .card {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    aspect-ratio: 1 / 1; /* Membuat semua kotak berbentuk persegi */
+  }
   
+  /* Efek hover pada card */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
   
-
+  /* Efek untuk gambar dalam card */
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* Animasi gerak gambar saat hover */
+  }
+  
+  /* Efek hover pada gambar untuk bergerak */
+  .card img:hover {
+    transform: scale(1.05); /* Gambar sedikit membesar */
+  }
+  
+  /* Pop-up styling untuk gambar yang dibesarkan */
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Awalnya tersembunyi */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .popup img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Menyesuaikan gambar dengan ukuran aslinya */
+  }
+  
 /* Services
 ---------------------------------*/
 .service-section {
