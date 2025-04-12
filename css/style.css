@@ -554,12 +554,13 @@ a.read_more:hover {
 /* Grid setup */
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 kolom fleksibel */
-    gap: 16px; /* Jarak antar kotak */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Menyesuaikan jumlah kolom sesuai layar */
+    gap: 16px;
     padding: 24px;
     max-width: 1200px;
     margin: auto;
   }
+  
   
   /* Card setup */
   .card {
@@ -611,6 +612,15 @@ a.read_more:hover {
     max-height: 100%;
     object-fit: contain; /* Menyesuaikan gambar dengan ukuran aslinya */
   }
+  
+  @media (max-width: 480px) {
+    .team-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 12px;
+      gap: 12px;
+    }
+  }
+  
   
 /* Services
 ---------------------------------*/
