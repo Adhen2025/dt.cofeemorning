@@ -155,112 +155,88 @@
         <p>Clients Served</p>
       </div>
     </div>
-
-
-    <section class="team-section" id="team">
-      <h2 class="team-title">Our Team</h2>
-      <div class="team">
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-            <img src="img/team/Jamrong.jpg" alt="Agus Djaelani">
-          </div>
-            <div class="team-info">
-              <p class="jabatan">Produser</p>
-              <h4 class="nama">Agus Djaelani</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Hasbi.jpg" alt="Abi Hasbi">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Manajer</p>
-              <h4 class="nama">Abi Hasbi</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Asep.jpg" alt="Abi Hasbi">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">CEO Founder</p>
-              <h4 class="nama">Asep</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Masud.jpg" alt="Mas'ud">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Fotografi</p>
-              <h4 class="nama">Mas'ud</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Agus.jpg" alt="Agus Fauzi">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Videografi</p>
-              <h4 class="nama">Agus Fauzi</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Dendi.jpg" alt="Dendi">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Desain Grafis</p>
-              <h4 class="nama">Dendi</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Farhan.jpg" alt="Farhan">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Videografi</p>
-              <h4 class="nama">Farhan</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Nurdin.jpg" alt="Nurdin">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Fotografi</p>
-              <h4 class="nama">Nurdin</h4>
-            </div>
-          </div>
-        </div>
-        <div class="team-card-wrapper">
-          <div class="team-card">
-            <div class="photo">
-              <img src="img/team/Septian.jpg" alt="Septian">
-            </div>
-            <div class="team-info">
-              <p class="jabatan">Septian</p>
-              <h4 class="nama">Humas</h4>
+    <section class="team-grid">
+      <!-- Baris 1 -->
+      <div class="card">
+        <img src="img/team/card (1).JPG" alt="Card 1" class="card-img">
+      </div>
+      <div class="card">
+        <img src="img/team/card (2).jpg" alt="Card 2" class="card-img">
+      </div>
+      <div class="card">
+        <img src="img/team/card (3).jpg" alt="Card 3" class="card-img">
+      </div>
+    
+      <!-- Baris 2 -->
+      <div class="card">
+        <img src="img/team/card (4).JPG" alt="Card 4" class="card-img">
+      </div>
+      <div class="card">
+        <img src="img/team/card (5).JPG" alt="Card 5" class="card-img">
+      </div>
+      <div class="card">
+        <img src="img/team/card (6).JPG" alt="Card 6" class="card-img">
+      </div>
+    
+      <!-- Baris 3 -->
+      <div class="card">
+        <img src="img/team/card (7).jpg" alt="Card 7" class="card-img">
+      </div>
+      <div class="card">
+        <img src="img/team/card (8).jpg" alt="Card 8" class="card-img">
+      </div>
+      <div class="card">
+        <img src="img/team/card (9).jpg" alt="Card 9" class="card-img">
       </div>
     </section>
     
+    <!-- Pop-up Image -->
+    <div class="popup" id="popup">
+      <img src="" alt="Popup Image" id="popupImg">
+    </div>
+    
+    
+    <!-- Pop-up Image -->
+    <div class="popup" id="popup">
+      <img src="" alt="Popup Image" id="popupImg">
+    </div>
     
 
+     <!-- JavaScript (Ditempelkan di sini) -->
+  <script>
+   // Mengambil semua gambar dalam kartu
+const images = document.querySelectorAll('.card img');
+
+// Mengambil elemen pop-up dan gambar di dalamnya
+const popup = document.getElementById('popup');
+const popupImg = document.getElementById('popupImg');
+
+// Menambahkan event listener pada setiap gambar
+images.forEach(img => {
+  img.addEventListener('click', function() {
+    // Mengubah sumber gambar pop-up dengan gambar yang diklik
+    popupImg.src = img.src;
+    // Menampilkan pop-up
+    popup.style.display = 'flex';
+  });
+});
+
+// Menambahkan event listener untuk menutup pop-up saat klik di luar gambar
+popup.addEventListener('click', function(e) {
+  // Mengecek jika klik terjadi di luar gambar
+  if (e.target === popup) {
+    popup.style.display = 'none'; // Menyembunyikan pop-up
+  }
+});
+  </script>
+
+    
+    <!-- Pop-up Image -->
+    <div class="popup" id="popup">
+      <img src="" alt="Popup Image" id="popupImg">
+    </div>
+    
+    
       
 </section>
 
@@ -522,6 +498,8 @@
       });
     });
   </script>
+
+  
 
   
 
